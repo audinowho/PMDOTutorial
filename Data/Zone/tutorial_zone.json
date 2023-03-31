@@ -21,7 +21,8 @@
 "Rogue": 0,
 "Segments": [],
 "GroundMaps": [
-"rescue_team_base_inside"
+"rescue_team_base_inside",
+"rescue_team_base"
 ]
 }
 }

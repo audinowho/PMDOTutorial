@@ -16,7 +16,8 @@
 "CountedFloors": 0,
 "Rogue": 0,
 "Grounds": [
-"rescue_team_base_inside"
+"rescue_team_base_inside",
+"rescue_team_base"
 ],
 "Maps": [],
 "Name": {
