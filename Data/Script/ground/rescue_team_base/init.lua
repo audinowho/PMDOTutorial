@@ -85,7 +85,9 @@ function rescue_team_base.Friend_Sign_Action(obj, activator)
 end
 
 function rescue_team_base.South_Exit_Touch(obj, activator)
-
+  local dungeon_entrances = { "large_woods" }
+  local ground_entrances = { }
+  COMMON.ShowDestinationMenu(dungeon_entrances, ground_entrances)
 end
 
 function rescue_team_base.Friend_Action(obj, activator)
@@ -93,6 +95,7 @@ function rescue_team_base.Friend_Action(obj, activator)
   UI:SetSpeaker(npc) --set it to the dialogue box
   GROUND:CharTurnToChar(npc, activator)
   UI:WaitShowDialogue(STRINGS:Format("Hello, {0}!", activator:GetDisplayName()))
+  COMMON.UnlockWithFanfare("large_woods", false)
 end
 
 
