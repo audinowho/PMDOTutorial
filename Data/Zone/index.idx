@@ -39,10 +39,15 @@
 "BagRestrict": -1,
 "BagSize": -1,
 "Rescues": 0,
-"CountedFloors": 1,
+"CountedFloors": 4,
 "Rogue": 0,
 "Grounds": [],
 "Maps": [
+[
+0,
+1,
+2
+],
 [
 0
 ]
