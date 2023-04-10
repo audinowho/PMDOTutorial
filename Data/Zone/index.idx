@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.5.0",
+"Version": "0.7.7.0",
 "Object": {
 "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[RogueEssence.Data.EntrySummary, RogueEssence]], System.Private.CoreLib",
 "tutorial_zone": {
@@ -39,14 +39,21 @@
 "BagRestrict": -1,
 "BagSize": -1,
 "Rescues": 0,
-"CountedFloors": 4,
+"CountedFloors": 11,
 "Rogue": 0,
 "Grounds": [],
 "Maps": [
 [
 0,
 1,
-2
+2,
+3,
+4,
+5,
+6,
+7,
+8,
+9
 ],
 [
 0
