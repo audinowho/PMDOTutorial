@@ -30,7 +30,15 @@ end
 --Engine callback function
 function large_woods.ExitSegment(zone, result, rescue, segmentID, mapID)
 
-  COMMON.EndDungeonDay(result, "tutorial_zone", -1, 0, 0)
+  if result ~= RogueEssence.Data.GameProgress.ResultType.Cleared then
+    COMMON.EndDungeonDay(result, "tutorial_zone", -1, 0, 0)
+  else
+    if segmentID == 0 then
+      GAME:EnterZone('large_woods', -1, 0, 0)
+	else
+	  COMMON.EndDungeonDay(result, "tutorial_zone", -1, 0, 0)
+	end
+  end
 end
 
 ---large_woods.Rescued(zone, name, mail)

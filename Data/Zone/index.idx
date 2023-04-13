@@ -41,7 +41,9 @@
 "Rescues": 0,
 "CountedFloors": 11,
 "Rogue": 0,
-"Grounds": [],
+"Grounds": [
+"large_lake"
+],
 "Maps": [
 [
 0,
