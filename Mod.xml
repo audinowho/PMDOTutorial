@@ -4,7 +4,7 @@
   <Description>A tutorial on how to make a custom quest in PMDO!</Description>
   <Namespace>tutorial</Namespace>
   <UUID>EAEB754F-163F-4E17-9DA8-E1A47A184393</UUID>
-  <Version>0.5</Version>
+  <Version>0.6</Version>
   <ModType>Quest</ModType>
   <Relationships />
 </Header>
