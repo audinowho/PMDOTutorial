@@ -32,6 +32,17 @@ end
 --Engine callback function
 function large_lake.Enter(map)
   
+  if SV.large_lake.ReturnVisit then
+    large_lake.EmptyReturn()
+  elseif SV.large_lake.BossComplete then
+    large_lake.PostBattle()
+  else
+    large_lake.PreBattle()
+  end
+end
+
+function large_lake.PreBattle()
+
   local player = CH("PLAYER")
   local enemy = CH("Croco")
   
@@ -81,7 +92,72 @@ function large_lake.Enter(map)
   GAME:CutsceneMode(false)
   
   GAME:ContinueDungeon('large_woods', 1, 0, 0)
+  
 end
+
+
+function large_lake.PostBattle()
+
+  local player = CH("PLAYER")
+  local enemy = CH("Croco")
+  
+  GAME:CutsceneMode(true)
+  
+  GROUND:Unhide("Croco")
+  
+  GAME:MoveCamera(180, 172, 1, false)
+  
+  GROUND:TeleportTo(player, 172, 192, Direction.Up)
+  
+  GAME:FadeIn(20)
+  
+  UI:SetSpeaker(enemy)
+  UI:WaitShowDialogue("Augh, alright I'll hear what you have to say.")
+  
+  local mon_id = RogueEssence.Dungeon.MonsterID("croconaw", 0, "normal", Gender.Male)
+  local recruit = _DATA.Save.ActiveTeam:CreatePlayer(_DATA.Save.Rand, mon_id, 30, "", 0)
+  COMMON.JoinTeamWithFanfare(recruit, from_dungeon)
+  
+  GAME:FadeOut(false, 20)
+  
+  GAME:CutsceneMode(false)
+  
+  SV.large_lake.ReturnVisit = true
+  COMMON.EndDungeonDay(RogueEssence.Data.GameProgress.ResultType.Cleared, "tutorial_zone", -1, 0, 0)
+  
+end
+
+function large_lake.EmptyReturn()
+
+  local player = CH("PLAYER")
+  local enemy = CH("Croco")
+  
+  GAME:CutsceneMode(true)
+  
+  UI:WaitShowTitle(GAME:GetCurrentGround().Name:ToLocal(), 20)
+  GAME:WaitFrames(30)
+  UI:WaitHideTitle(20)
+  
+  GAME:MoveCamera(180, 172, 1, false)
+  
+  GAME:FadeIn(20)
+  
+  GROUND:MoveToPosition(player, 172, 192, false, 2)
+  
+  UI:ResetSpeaker(false)
+  UI:SetCenter(true)
+  UI:WaitShowDialogue("This is appears to be the end of the dungeon.")
+  UI:WaitShowDialogue("It's impossible to go any farther.[pause=0] It's time to go back.")
+  
+  GAME:FadeOut(false, 20)
+  
+  GAME:CutsceneMode(false)
+  
+  SV.large_lake.ReturnVisit = true
+  COMMON.EndDungeonDay(RogueEssence.Data.GameProgress.ResultType.Cleared, "tutorial_zone", -1, 0, 0)
+  
+end
+
 
 ---large_lake.Exit(map)
 --Engine callback function

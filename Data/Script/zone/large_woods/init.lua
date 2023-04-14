@@ -36,7 +36,9 @@ function large_woods.ExitSegment(zone, result, rescue, segmentID, mapID)
     if segmentID == 0 then
       GAME:EnterZone('large_woods', -1, 0, 0)
 	else
-	  COMMON.EndDungeonDay(result, "tutorial_zone", -1, 0, 0)
+	  --COMMON.EndDungeonDay(RogueEssence.Data.GameProgress.ResultType.Cleared, "tutorial_zone", -1, 0, 0)
+	  SV.large_lake.BossComplete = true
+	  GAME:EnterZone('large_woods', -1, 0, 0)
 	end
   end
 end
