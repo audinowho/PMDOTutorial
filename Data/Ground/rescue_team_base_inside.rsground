@@ -15658,6 +15658,7 @@
 "EntName": "Base_Exit",
 "Direction": 4,
 "EntEnabled": true,
+"EntOrder": 0,
 "triggerType": 0,
 "Collider": {
 "X": 160,

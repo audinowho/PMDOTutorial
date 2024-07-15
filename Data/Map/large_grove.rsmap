@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.5.0",
+"Version": "0.8.2.0",
 "Object": {
 "$type": "RogueEssence.Dungeon.Map, RogueEssence",
 "Name": {
@@ -17,6 +17,9 @@
 {
 "Element1": "normal",
 "Element2": "none",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -104,9 +107,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -122,19 +122,39 @@
 "$type": "PMDC.Dungeon.AttackFoesPlan, PMDC",
 "AttackPattern": 1,
 "PositionPattern": 0,
-"IQ": 36
+"IQ": 36,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
-"IQ": 164
+"IQ": 164,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
-"IQ": 164
+"IQ": 164,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
-"IQ": 164
+"IQ": 164,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 }
 ]
 },
@@ -183,19 +203,23 @@
 "BaseSkills": [
 {
 "SkillNum": "super_fang",
-"Charges": 15
+"Charges": 15,
+"CanForget": true
 },
 {
 "SkillNum": "crunch",
-"Charges": 16
+"Charges": 16,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -356,6 +380,7 @@
 "X": 0,
 "Y": 0
 },
+"HideMinimap": false,
 "NoRescue": false,
 "NoSwitching": false,
 "MapTurns": 0,
@@ -363,8 +388,7 @@
 "CurrentOrder": {
 "TurnTier": 0,
 "Faction": 0,
-"TurnIndex": 0,
-"SkipAll": false
+"TurnIndex": 0
 },
 "TurnToChar": []
 },
@@ -1433,6 +1457,14 @@
 }
 ]
 ]
+}
+],
+"Decorations": [
+{
+"Name": "New Deco",
+"Layer": 0,
+"Visible": true,
+"Anims": []
 }
 ],
 "Tiles": [
