@@ -1,16 +1,18 @@
 ﻿{
-"Version": "0.7.4.0",
+"Version": "0.8.2.0",
 "Object": {
 "$type": "System.Collections.Generic.Dictionary`2[[System.String, System.Private.CoreLib],[RogueEssence.Data.EntrySummary, RogueEssence]], System.Private.CoreLib",
 "tutorial_zone": {
 "$type": "RogueEssence.Data.ZoneEntrySummary, RogueEssence",
-"NoEXP": false,
+"ExpPercent": 100,
 "Level": -1,
 "LevelCap": false,
+"KeepSkills": false,
 "TeamRestrict": false,
 "TeamSize": -1,
 "MoneyRestrict": false,
 "BagRestrict": -1,
+"KeepTreasure": false,
 "BagSize": -1,
 "Rescues": 0,
 "CountedFloors": 0,
