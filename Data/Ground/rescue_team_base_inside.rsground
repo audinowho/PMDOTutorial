@@ -15653,6 +15653,18 @@
 "Width": 16,
 "Height": 16
 }
+},
+{
+"EntName": "Base_Exit",
+"Direction": 4,
+"EntEnabled": true,
+"triggerType": 0,
+"Collider": {
+"X": 160,
+"Y": 240,
+"Width": 16,
+"Height": 16
+}
 }
 ]
 }
