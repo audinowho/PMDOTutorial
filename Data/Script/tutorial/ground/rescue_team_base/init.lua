@@ -9,11 +9,6 @@ require 'origin.common'
 -- Package name
 local rescue_team_base = {}
 
--- Local, localized strings table
--- Use this to display the named strings you added in the strings files for the map!
--- Ex:
---      local localizedstring = MapStrings['SomeStringName']
-
 
 -------------------------------
 -- Map Callbacks
@@ -22,9 +17,6 @@ local rescue_team_base = {}
 --Engine callback function
 function rescue_team_base.Init(map)
 
-  --This will fill the localized strings table automatically based on the locale the game is 
-  -- currently in. You can use the MapStrings table after this line!
-  
 
 end
 
