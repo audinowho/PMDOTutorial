@@ -3881,7 +3881,7 @@
 },
 "Value": {
 "$type": "RogueEssence.LevelGen.MappedRoomStep`1[[RogueEssence.LevelGen.MapLoadContext, RogueEssence]], RogueEssence",
-"MapID": "large_grove"
+"MapID": "large_lake"
 }
 },
 {
@@ -3894,21 +3894,6 @@
 "$type": "PMDC.LevelGen.MapTimeLimitStep`1[[RogueEssence.LevelGen.MapLoadContext, RogueEssence]], PMDC",
 "TimeLimit": 1000
 }
-},
-{
-"Key": {
-"str": [
-0
-]
-},
-"Value": {
-"$type": "PMDC.LevelGen.MapTitleDropStep`1[[RogueEssence.LevelGen.MapLoadContext, RogueEssence]], PMDC",
-"DropPriority": {
-"str": [
--15
-]
-}
-}
 }
 ],
 "Comment": ""
@@ -3919,6 +3904,8 @@
 "Comment": ""
 }
 ],
-"GroundMaps": []
+"GroundMaps": [
+"large_lake"
+]
 }
 }
