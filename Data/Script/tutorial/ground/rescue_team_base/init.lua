@@ -9,7 +9,6 @@ require 'origin.common'
 -- Package name
 local rescue_team_base = {}
 
-
 -------------------------------
 -- Map Callbacks
 -------------------------------
