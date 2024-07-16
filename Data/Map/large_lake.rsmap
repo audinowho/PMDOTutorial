@@ -1,5 +1,5 @@
 ﻿{
-"Version": "0.7.7.0",
+"Version": "0.8.2.0",
 "Object": {
 "$type": "RogueEssence.Dungeon.Map, RogueEssence",
 "Name": {
@@ -17,6 +17,9 @@
 {
 "Element1": "water",
 "Element2": "none",
+"TurnWait": 0,
+"TiersUsed": 0,
+"TurnUsed": false,
 "movementSpeed": 0,
 "dead": false,
 "serializationLoc": {
@@ -24,14 +27,6 @@
 "Y": 4
 },
 "serializationDir": 0,
-"ActionEvents": [],
-"IsFounder": false,
-"BaseForm": {
-"Species": "croconaw",
-"Form": 0,
-"Skin": "normal",
-"Gender": 1
-},
 "ProxyName": "",
 "ProxySprite": {
 "Species": "",
@@ -112,9 +107,6 @@
 "MaxFullness": 100,
 "StatusEffects": {},
 "MustHitNext": false,
-"TurnWait": 0,
-"TiersUsed": 0,
-"TurnUsed": false,
 "EXPMarked": false,
 "Tactic": {
 "Name": {
@@ -130,19 +122,39 @@
 "$type": "PMDC.Dungeon.AttackFoesPlan, PMDC",
 "AttackPattern": 4,
 "PositionPattern": 2,
-"IQ": 253
+"IQ": 253,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.FollowLeaderPlan, PMDC",
-"IQ": 253
+"IQ": 253,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.ExplorePlan, PMDC",
-"IQ": 253
+"IQ": 253,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 },
 {
 "$type": "PMDC.Dungeon.WaitPlan, PMDC",
-"IQ": 253
+"IQ": 253,
+"RestrictedMobilityTypes": 0,
+"RestrictMobilityPassable": false,
+"AttackRange": 0,
+"StatusRange": 0,
+"SelfStatusRange": 4
 }
 ]
 },
@@ -174,6 +186,12 @@
 "Nickname": "",
 "OriginalUUID": "",
 "OriginalTeam": "",
+"BaseForm": {
+"Species": "croconaw",
+"Form": 0,
+"Skin": "normal",
+"Gender": 1
+},
 "Level": 30,
 "EXP": 0,
 "MaxHPBonus": 0,
@@ -185,19 +203,23 @@
 "BaseSkills": [
 {
 "SkillNum": "crunch",
-"Charges": 16
+"Charges": 16,
+"CanForget": true
 },
 {
 "SkillNum": "aqua_tail",
-"Charges": 15
+"Charges": 15,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 },
 {
 "SkillNum": "",
-"Charges": 0
+"Charges": 0,
+"CanForget": true
 }
 ],
 "BaseIntrinsics": [
@@ -223,10 +245,12 @@
 },
 "EntryPoint": -1
 },
+"IsFounder": false,
 "IsPartner": false,
 "NameLocked": false,
 "IsFavorite": false,
 "Unrecruitable": false,
+"ActionEvents": [],
 "ScriptVars": null
 }
 ],
@@ -281,6 +305,36 @@
 },
 "Value": {
 "$type": "PMDC.Dungeon.BattlePositionEvent, PMDC",
+"StartLocs": [
+{
+"Loc": {
+"X": 0,
+"Y": 0
+},
+"Dir": 4
+},
+{
+"Loc": {
+"X": 0,
+"Y": 1
+},
+"Dir": 4
+},
+{
+"Loc": {
+"X": -1,
+"Y": 0
+},
+"Dir": 4
+},
+{
+"Loc": {
+"X": 1,
+"Y": 0
+},
+"Dir": 4
+}
+],
 "Positions": [
 {
 "X": 0,
@@ -396,6 +450,7 @@
 "X": 0,
 "Y": 0
 },
+"HideMinimap": false,
 "NoRescue": false,
 "NoSwitching": false,
 "MapTurns": 0,
@@ -403,8 +458,7 @@
 "CurrentOrder": {
 "TurnTier": 0,
 "Faction": 0,
-"TurnIndex": 0,
-"SkipAll": false
+"TurnIndex": 0
 },
 "TurnToChar": []
 },
@@ -2157,6 +2211,14 @@
 }
 ]
 ]
+}
+],
+"Decorations": [
+{
+"Name": "New Deco",
+"Layer": 0,
+"Visible": true,
+"Anims": []
 }
 ],
 "Tiles": [
